@@ -15,7 +15,7 @@ class PlayingCard : Card
     {
         get
         {
-                    return self.suit
+            return self.suit
         }
         set(suit)
         {
@@ -50,7 +50,14 @@ class PlayingCard : Card
         super.init()
         rank = 0
         suit = String()
-        color = UIColor()
+        color = UIColor.redColor()
+    }
+    init(withRank: Int, ofSuit: String)
+    {
+        super.init()
+        color = UIColor.redColor()
+        suit = ofSuit
+        rank = withRank
     }
     
     override func toString() -> String
@@ -85,4 +92,23 @@ class PlayingCard : Card
     {
         return color
     }
+    
+    //The class modifier makes it so the method is visible without an instance.
+    //You would call it by ClassName.method()
+    //In this case PlayingCard.validRanks()
+    class func validRanks() -> [String]
+    {
+        return ["??","A","2","3","4","5","6","7","8","9","10","J","Q","K"]
+    }
+    
+    class func maxRank() -> Int
+    {
+            return validRanks().count - 1
+    }
+    
+    class func validSuits() -> [String]
+    {
+        return ["♦️", "♣️","♥️","♠️"]
+    }
+    
 }
