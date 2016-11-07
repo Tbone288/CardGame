@@ -11,28 +11,8 @@ import UIKit
 class Card
 {
     internal var backImage : UIImage
-    {
-        get
-        {
-            return self.backImage
-        }
-        set(backImage)
-        {
-            self.backImage = backImage
-        }
-    }
     internal var isFaceUp : Bool
-    {
-        get
-        {
-            return self.isFaceUp
-        }
-        set(isFaceUp)
-        {
-            self.isFaceUp = isFaceUp
-        }
-    }
-    //swift way
+
     init()
     {
         backImage = UIImage(named: "card back")!
