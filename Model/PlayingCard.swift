@@ -64,6 +64,10 @@ class PlayingCard : Card
     {
         return color
     }
+    func getCardData() -> String
+    {
+        return "\(PlayingCard.validRanks()[rank]) \(suit)"
+    }
     
     //The class modifier makes it so the method is visible without an instance.
     //You would call it by ClassName.method()
