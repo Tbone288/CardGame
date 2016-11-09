@@ -17,23 +17,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7W-gd-QEe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFo-XL-nMK">
+                                <rect key="frame" x="164" y="42" width="266" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7W-gd-QEe">
                                 <rect key="frame" x="164" y="94" width="273" height="411"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
                                 <state key="normal" title="Words" backgroundImage="card back">
                                     <color key="titleColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="164" y="194" width="273" height="411"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="195" y="250" width="211" height="300"/>
                                 </variation>
+                                <connections>
+                                    <action selector="cardClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N1K-hm-YEh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="L7W-gd-QEe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2xX-H8-1uU"/>
+                            <constraint firstItem="L7W-gd-QEe" firstAttribute="top" secondItem="fFo-XL-nMK" secondAttribute="bottom" constant="30" id="A2Q-Q5-dyR"/>
+                            <constraint firstItem="L7W-gd-QEe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hcr-A7-H2m"/>
+                            <constraint firstItem="fFo-XL-nMK" firstAttribute="leading" secondItem="L7W-gd-QEe" secondAttribute="leading" id="QCG-Dg-dCb"/>
+                            <constraint firstItem="fFo-XL-nMK" firstAttribute="width" secondItem="L7W-gd-QEe" secondAttribute="width" id="yih-xj-AGO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cardButton" destination="L7W-gd-QEe" id="lkr-w0-NR0"/>
+                        <outlet property="cardLabel" destination="fFo-XL-nMK" id="2EK-eN-BR2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="249" y="443"/>
+            <point key="canvasLocation" x="249" y="442.5"/>
         </scene>
     </scenes>
     <resources>

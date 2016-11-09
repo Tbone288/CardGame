@@ -29,11 +29,6 @@ class PlayingCardDeck : Deck
         
     }
     
-    func shuffleDeck() -> Void
-    {
-        
-    }
-    
     func orderDeck() -> Void
     {
         
